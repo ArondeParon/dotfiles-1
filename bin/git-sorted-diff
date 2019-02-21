@@ -1,0 +1,5 @@
+#!/bin/bash
+# Diff a local file vs. HEAD, but sort first.
+# This is extremely handy when diff'ing structured files (such as XML) that are automatically generated, but not always in the same order.
+# Using this command, you are 100% sure to see the actual differences
+diff -wB <(sort $1) <(git show HEAD:$1 | sort -)
