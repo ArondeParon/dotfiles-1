@@ -26,6 +26,7 @@ brew 'ansible'
 brew 'hub'
 brew 'fd'
 brew 'bat'
+brew 'jq'
 
 cask 'transmission'
 cask 'hyper'
