@@ -6,6 +6,9 @@ NODE_GLOBALS+=("node")
 NODE_GLOBALS+=("nvm")
 
 load_nvm () {
+    if [ ! -e ~/.nvm ]; then
+        return 0
+    fi
     export NVM_DIR=~/.nvm
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 }
