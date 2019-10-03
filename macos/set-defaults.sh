@@ -65,8 +65,8 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # Dock
 ##################################################################################
 
-# Remove the auto-hiding Dock delay
-defaults write com.apple.dock autohide-delay -float 0
+# Make the dock hide/show animation a lot faster
+defaults write com.apple.dock autohide-time-modifier -float 0.15
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
