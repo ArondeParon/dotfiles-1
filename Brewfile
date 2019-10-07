@@ -63,3 +63,8 @@ cask 'qlmarkdown'
 cask 'quicklook-json'
 cask 'qlprettypatch'
 cask 'quicklook-csv'
+
+# App Store applications
+mas "Spark", id: 1176895641
+mas "Todoist", id: 585829637
+mas "Xcode", id: 497799835
