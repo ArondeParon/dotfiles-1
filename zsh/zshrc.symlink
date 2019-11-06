@@ -12,6 +12,10 @@ export DEFAULT_USER=`whoami`
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
+# Prevent a percent sign from showing up on every new prompt
+# See https://github.com/zeit/hyper/issues/2144#issuecomment-326741620
+unsetopt PROMPT_SP
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -66,7 +70,3 @@ export PATH="$HOME/.yarn/bin:/Users/aron/Library/Python/2.7/bin:$HOME/.composer/
 
 export LC_ALL=en_US.UTF-8 
 export LANG=en_US.UTF-8
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
