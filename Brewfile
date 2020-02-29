@@ -29,6 +29,7 @@ brew 'bat'
 brew 'jq'
 brew 'watchman'
 brew 'react-native-cli'
+brew 'mackup'
 
 cask 'transmission'
 cask 'hyper'
@@ -55,6 +56,7 @@ cask 'aerial'
 cask 'font-fira-code'
 cask 'android-studio'
 cask 'visual-studio-code'
+cask 'notion'
 
 # Quick look plugins
 cask 'qlcolorcode'
