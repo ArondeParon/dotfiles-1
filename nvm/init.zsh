@@ -1,19 +1,20 @@
-# This trick drastically improves zsh performance because it will lazy load nvm instead of initializing it on every terminal.
-# @see https://www.reddit.com/r/node/comments/4tg5jg/lazy_load_nvm_for_faster_shell_start/d5ib9fs/
-declare -a NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
-
-NODE_GLOBALS+=("node")
-NODE_GLOBALS+=("nvm")
-
-load_nvm () {
-    if [ ! -e ~/.nvm ]; then
-        return 0
+##### nvm (node version manager) #####
+# placeholder nvm shell function
+# On first use, it will set nvm up properly which will replace the `nvm`
+# shell function with the real one
+nvm() {
+  if [[ -d '/usr/local/opt/nvm' ]]; then
+    NVM_DIR="/usr/local/opt/nvm"
+    export NVM_DIR
+    # shellcheck disable=SC1090
+    source "${NVM_DIR}/nvm.sh"
+    if [[ -e ~/.nvm/alias/default ]]; then
+      PATH="${PATH}:${HOME}.nvm/versions/node/$(cat ~/.nvm/alias/default)/bin"
     fi
-    export NVM_DIR=~/.nvm
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+    # invoke the real nvm function now
+    nvm "$@"
+  else
+    echo "nvm is not installed" >&2
+    return 1
+  fi
 }
-
-for cmd in "${NODE_GLOBALS[@]}"; do
-    eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
-done

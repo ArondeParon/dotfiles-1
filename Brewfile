@@ -57,6 +57,10 @@ cask 'font-fira-code'
 cask 'android-studio'
 cask 'visual-studio-code'
 cask 'notion'
+cask 'runjs'
+cask 'docker'
+cask 'java'
+cask 'tweeten'
 
 # Quick look plugins
 cask 'qlcolorcode'
