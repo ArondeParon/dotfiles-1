@@ -1,5 +1,6 @@
-# Load antigen
-source $HOME/.dotfiles/zsh/antigen.zsh
+# Load our zsh config that lives on top of antigen
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
 
 # Shortcut to oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
@@ -9,21 +10,6 @@ export DOT=$HOME/.dotfiles
 
 # Set default user to prevent name@host to show in the terminal
 export DEFAULT_USER=`whoami`
-
-plugins=()
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
-
-# Prevent a percent sign from showing up on every new prompt
-# See https://github.com/zeit/hyper/issues/2144#issuecomment-326741620
-unsetopt PROMPT_SP
-
-if [ -e $ZSH/oh-my-zsh.sh ]; then
-  source $ZSH/oh-my-zsh.sh
-fi
 
 # User configuration
 export PROJECTS=~/Code
@@ -36,7 +22,8 @@ then
   source ~/.localrc
 fi
 
-# all of our zsh files
+#############
+
 typeset -U config_files
 config_files=($DOT/**/*.zsh)
 
@@ -73,18 +60,5 @@ done
 
 unset config_files
 
-export PATH="$HOME/.yarn/bin:/Users/aron/Library/Python/2.7/bin:$HOME/.composer/vendor/bin:$PATH"
-
-export LC_ALL=en_US.UTF-8 
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-# Load antigen
-source $HOME/.dotfiles/antigen.zsh
-
-# Antigen plugins
-antigen use oh-my-zsh
-antigen bundle zsh-users/zsh-autosuggestions
-antigen theme agnoster
-antigen apply
-
-# Load our additional zsh configuration
-source $HOME/.dotfiles/zsh/zsh.init

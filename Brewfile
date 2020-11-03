@@ -18,7 +18,10 @@ brew 'youtube-dl'
 brew 'tree'
 brew 'mas'
 brew 'php@7.3'
+brew 'pkg-config'
+brew 'imagemagick'
 brew 'composer'
+brew 'mailhog'
 brew 'watchman'
 brew 'bower'
 brew 'blackfire-agent'
@@ -46,8 +49,6 @@ cask 'steam'
 cask 'phpstorm'
 cask 'whatsapp'
 cask 'telegram'
-cask 'querious'
-cask 'sketch'
 cask 'the-unarchiver'
 cask 'teamviewer'
 cask 'mplayerx'
@@ -61,7 +62,6 @@ cask 'insomnia'
 cask 'notion'
 cask 'runjs'
 cask 'docker'
-cask 'java'
 cask 'tweeten'
 
 # Quick look plugins
@@ -73,6 +73,5 @@ cask 'qlprettypatch'
 cask 'quicklook-csv'
 
 # App Store applications
-mas "Spark", id: 1176895641
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
