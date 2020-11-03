@@ -1,20 +1,13 @@
-##### nvm (node version manager) #####
-# placeholder nvm shell function
-# On first use, it will set nvm up properly which will replace the `nvm`
-# shell function with the real one
-nvm() {
-  if [[ -d '/usr/local/opt/nvm' ]]; then
-    NVM_DIR="/usr/local/opt/nvm"
-    export NVM_DIR
-    # shellcheck disable=SC1090
-    source "${NVM_DIR}/nvm.sh"
-    if [[ -e ~/.nvm/alias/default ]]; then
-      PATH="${PATH}:${HOME}.nvm/versions/node/$(cat ~/.nvm/alias/default)/bin"
-    fi
-    # invoke the real nvm function now
-    nvm "$@"
-  else
-    echo "nvm is not installed" >&2
-    return 1
-  fi
+declare -a NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
+
+NODE_GLOBALS+=("node")
+NODE_GLOBALS+=("nvm")
+
+load_nvm () {
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 }
+
+for cmd in "${NODE_GLOBALS[@]}"; do
+    eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
+done
