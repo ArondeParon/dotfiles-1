@@ -42,6 +42,7 @@ done
 # initialize autocomplete here, otherwise functions won't be loaded
 # We do this once every 24 to speed things up.
 # @see https://gist.github.com/ctechols/ca1035271ad134841284#gistcomment-1930109
+autoload -U compinit
 setopt EXTENDEDGLOB
 for dump in $HOME/.zcompdump(#qN.m1); do
   compinit
