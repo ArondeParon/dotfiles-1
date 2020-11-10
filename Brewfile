@@ -34,6 +34,7 @@ brew 'watchman'
 brew 'react-native-cli'
 brew 'mackup'
 brew 'antigen'
+brew 'git-flow'
 
 cask 'postman'
 cask 'tuple'
