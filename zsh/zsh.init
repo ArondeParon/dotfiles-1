@@ -1,3 +1,6 @@
+# Fix a % sign from appearing in the prompt
+unsetopt PROMPT_SP
+
 # Load our zsh config that lives on top of antigen
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
