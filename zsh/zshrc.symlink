@@ -4,6 +4,7 @@ source $HOME/.dotfiles/antigen.zsh
 # Antigen plugins
 antigen use oh-my-zsh
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle git
 antigen bundle git-flow
 
 antigen theme agnoster
