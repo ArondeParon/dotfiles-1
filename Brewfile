@@ -32,6 +32,7 @@ brew 'watchman'
 brew 'react-native-cli'
 brew 'mackup'
 brew 'antigen'
+brew 'serverless'
 
 cask 'zoom'
 cask 'postman'
