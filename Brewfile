@@ -33,6 +33,7 @@ brew 'react-native-cli'
 brew 'mackup'
 brew 'antigen'
 brew 'serverless'
+brew 'awscli'
 
 cask 'zoom'
 cask 'postman'
@@ -72,5 +73,6 @@ cask 'qlprettypatch'
 cask 'quicklook-csv'
 
 # App Store applications
+mas "Save to Raindrop", id: 1549370672
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
