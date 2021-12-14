@@ -12,3 +12,4 @@ antigen apply
 
 # Load our additional zsh configuration
 source $HOME/.dotfiles/zsh/zsh.init
+

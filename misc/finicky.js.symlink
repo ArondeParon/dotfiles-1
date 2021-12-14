@@ -1,0 +1,21 @@
+module.exports = {
+	defaultBrowser: "Safari",      
+	handlers: [
+		{
+			match: /^https?:\/\/meet\.google\.com\/.*$/,
+			browser: "Google Chrome"
+		},
+		{
+			match: /^https?:\/\/.+\.stoplight\.io\/.*$/,
+			browser: "Google Chrome"
+		},
+		{
+			match: [
+				"zoom.us/*",
+				finicky.matchDomains(/.*\zoom.us/),
+				/zoom.us\/j\//,
+			],
+			browser: "us.zoom.xos"
+		}	  
+	]
+}

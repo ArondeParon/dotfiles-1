@@ -53,12 +53,12 @@ cask 'the-unarchiver'
 cask 'mplayerx'
 cask 'sip'
 cask 'google-chrome'
-cask 'aerial'
 cask 'font-fira-code'
 cask 'visual-studio-code'
 cask 'notion'
 cask 'runjs'
 cask 'sourcetree'
+cask 'finicky'
 
 # Gaming
 cask 'nvidia-geforce-now'
