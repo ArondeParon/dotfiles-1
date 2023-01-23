@@ -5,6 +5,12 @@ tap 'blackfireio/homebrew-blackfire'
 tap 'homebrew/cask-fonts'
 tap 'shivammathur/php'
 
+# Install Dropbox so we can sync right away
+cask 'dropbox'
+
+# Install Warp so we can get out of this plain terminal
+cask 'warp'
+
 brew 'coreutils'
 brew 'ack'
 brew 'go'
@@ -34,9 +40,9 @@ brew 'antigen'
 brew 'serverless'
 brew 'awscli'
 
+cask 'tailscale'
+cask 'docker'
 cask 'zoom'
-cask 'tuple'
-cask 'maestral'
 cask '1password'
 cask 'bettertouchtool'
 cask 'karabiner-elements'
@@ -44,9 +50,10 @@ cask 'spotify'
 cask 'sublime-text'
 cask 'slack'
 cask 'phpstorm'
+cask 'dbngin'
+cask 'tableplus'
 cask 'whatsapp'
 cask 'telegram'
-cask 'mplayerx'
 cask 'sip'
 cask 'google-chrome'
 cask 'font-fira-code'
@@ -55,6 +62,8 @@ cask 'notion'
 cask 'runjs'
 cask 'sourcetree'
 cask 'finicky'
+cask 'raycast'
+cask 'mimestream'
 
 # Gaming
 cask 'nvidia-geforce-now'
@@ -64,3 +73,4 @@ cask 'steam'
 mas "Save to Raindrop", id: 1549370672
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
+mas "NextDNS", id: 1464122853
